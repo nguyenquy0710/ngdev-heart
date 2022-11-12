@@ -16,5 +16,5 @@
     "editor.wordBasedSuggestions": true,
 
     // Enable parameter hints
-    "editor.parameterHints": true
+    // "editor.parameterHints": true
 }
