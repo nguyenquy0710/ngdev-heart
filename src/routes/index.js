@@ -26,4 +26,12 @@ router.get('/heart01', (req, res, next) => {
         });
 });
 
+router.get('/zalo_verifierGjIaShB99sHZk85uWuKrJrxmu1YoXJ9ED3K.html', (req, res, next) => {
+    return res
+        .status(200)
+        .render('zalo_verifierGjIaShB99sHZk85uWuKrJrxmu1YoXJ9ED3K', {
+            title: "Nguyen Quy Blog",
+        });
+});
+
 module.exports = router;
