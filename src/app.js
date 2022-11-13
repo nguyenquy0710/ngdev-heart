@@ -106,11 +106,11 @@ app.use(cors({
  * Set security HTTP headers
  */
 // https://github.com/helmetjs/helmet
-app.use(helmet({
-    frameguard: {
-        action: "sameorigin",
-    },
-}));
+// app.use(helmet({
+//     frameguard: {
+//         action: "sameorigin",
+//     },
+// }));
 
 /**
  * static files
