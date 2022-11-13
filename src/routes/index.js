@@ -18,4 +18,12 @@ router.get('/', (req, res, next) => {
         });
 });
 
+router.get('/heart01', (req, res, next) => {
+    return res
+        .status(200)
+        .render('heart01', {
+            title: "Nguyen Quy Blog",
+        });
+});
+
 module.exports = router;
