@@ -2,7 +2,7 @@
 
 <html lang="vi" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
 
-<HEAD>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
@@ -53,13 +53,13 @@
             height: 100%;
         }
     </style>
-</HEAD>
+</head>
 
-<BODY>
-    <canvas id="pinkboard"></canvas>
+<body>
+    <canvas id="pinkboard" onclick="playMusic()"></canvas>
     <script type="text/javascript" src="/assets/js/01.js?v=0.0.1"></script>
 
-    <div class="center-text" , style="background-color:white;
+    <div class="center-text" style="background-color:white;
         width: 100%;
         color: rgb(29, 105, 171);
         height: 100%;
@@ -75,7 +75,28 @@
 
     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5HEOfz4KGlY?controls=0" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
+    <audio id="audio" controls="controls" autoplay="autoplay" loop="loop" preload="auto" hidden>
+        <source src="/assets/mp3/Thanh-Xuan-Cua-Toi-Dan-Truong.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
 
-</BODY>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        var isPlay = false;
+        $(function () {
+            console.log("ready!");
+        });
 
-</HTML>
+        function playMusic(event) {
+            if (!isPlay) {
+                $('#audio')[0].play();
+                isPlay = true;
+            }
+            else
+                console.log('music is running...');
+        }
+    </script>
+
+</body>
+
+</html>
